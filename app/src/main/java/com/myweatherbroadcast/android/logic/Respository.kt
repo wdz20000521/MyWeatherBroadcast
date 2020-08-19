@@ -11,7 +11,7 @@ object Respository {
     fun searchPlaces(query: String) = fire(Dispatchers.IO) {
         val placeResponse = MyWeatherBroadcastNetwork.searchPlaces(query)
         if (placeResponse.status == "ok") {
-            val places = placeResponse.place
+            val places = placeResponse.places
             Result.success(places)
         } else {
             Result.failure(RuntimeException("返回状态为：${placeResponse.status}"))

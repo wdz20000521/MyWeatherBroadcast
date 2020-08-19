@@ -18,19 +18,14 @@ object MyWeatherBroadcastNetwork {
             enqueue(object : Callback<T> {
                 override fun onResponse(call: Call<T>, response: Response<T>) {
                     val body = response.body()
-                    if (body != null) {
-                        continuation.resume(body)
-                    } else {
-                        continuation.resumeWithException(RuntimeException("响应值为空！"))
-                    }
+                    if (body != null) continuation.resume(body)
+                    else continuation.resumeWithException(RuntimeException("相应值为空！"))
                 }
 
                 override fun onFailure(call: Call<T>, t: Throwable) {
                     continuation.resumeWithException(t)
                 }
-
             })
         }
     }
-
 }

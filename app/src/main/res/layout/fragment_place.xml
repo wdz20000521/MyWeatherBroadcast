@@ -22,9 +22,14 @@
             android:id="@+id/searchPlaceEdit"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:ems="10"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/search_bg"
             android:hint="@string/placeInputHint"
-            android:inputType="text" />
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
     </FrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView

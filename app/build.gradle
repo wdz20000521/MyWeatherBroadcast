@@ -6,6 +6,15 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
 
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
     defaultConfig {
         applicationId "com.myweatherbroadcast.android"
         minSdkVersion 21
@@ -32,11 +41,13 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
-    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0"
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta3'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

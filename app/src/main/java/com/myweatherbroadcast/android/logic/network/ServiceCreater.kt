@@ -2,7 +2,6 @@ package com.myweatherbroadcast.android.logic.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 object ServiceCreater {
 
