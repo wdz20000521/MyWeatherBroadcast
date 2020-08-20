@@ -2,4 +2,11 @@
     <string name="app_name">我的天气预报</string>
     <string name="placeInputHint">请输入地址</string>
     <string name="noPlaceResultWarning">未找到任何地点</string>
+    <string name="forecastCardText">预报</string>
+    <string name="lifeIndexCardText">生活指数</string>
+    <string name="coldRiskText">感冒</string>
+    <string name="dressingText">穿衣</string>
+    <string name="ultravioletText">紫外线</string>
+    <string name="carWashingText">洗车</string>
+    <string name="airQuality">空气指数</string>
 </resources>
