@@ -1,6 +1,8 @@
 package com.myweatherbroadcast.android.logic
 
 import androidx.lifecycle.liveData
+import com.myweatherbroadcast.android.logic.dao.PlaceDao
+import com.myweatherbroadcast.android.logic.model.Place
 import com.myweatherbroadcast.android.logic.model.Weather
 import com.myweatherbroadcast.android.logic.network.MyWeatherBroadcastNetwork
 import kotlinx.coroutines.Dispatchers
@@ -10,6 +12,12 @@ import kotlin.coroutines.CoroutineContext
 
 
 object Repository {
+
+    fun savePlace(place: Place) = PlaceDao.savePlace(place)
+
+    fun getSavedPlace() = PlaceDao.getSavedPlace()
+
+    fun isPlaceSaved() = PlaceDao.isPlaceSaved()
 
     fun searchPlaces(query: String) = fire(Dispatchers.IO) {
         val placeResponse = MyWeatherBroadcastNetwork.searchPlaces(query)
